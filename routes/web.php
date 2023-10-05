@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\NewsController;
 use Illuminate\Support\Facades\Route;
+use App\Http\controller\RegisterController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,14 +19,14 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/', function () {
-    echo 'lu ga asik';
+Route::get('info', function () {echo'info';
 });
 
 
-Route::get('/', function() {
-    echo 'apaan sih';
+Route::get('register', function() {echo'register';
 });
 
 Route::get('/show',[NewsController::class, 'show']);
 Route::get('/create',[NewsController::class, 'create']);
+
+Route::get('RegisterController',[RegisterController::class,'index']);
